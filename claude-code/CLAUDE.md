@@ -127,6 +127,16 @@ Personal preferences and cross-project context for Claude Code.
             </stack_mapping>
         </project>
 
+        <project name="AI Assistant Config">
+            <path_local>/home/cib/ai-assistant-config</path_local>
+            <repo>github.com:jhathcock-sys/ai-assistant-config.git</repo>
+            <purpose>Backup of Claude Code memory, custom skills, and prompts</purpose>
+            <structure>
+                <dir path="claude-code/">CLAUDE.md backup and skills</dir>
+                <dir path="prompts/">Reusable prompt templates</dir>
+            </structure>
+        </project>
+
         <project name="Portfolio Site">
             <path_local>/home/cib/my-portfolio</path_local>
             <repo>github.com:jhathcock-sys/me.git</repo>
