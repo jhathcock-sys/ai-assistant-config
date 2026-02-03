@@ -1,7 +1,5 @@
 # CLAUDE.md - AI Assistant Config
 
-This file provides guidance to Claude Code when working in this repository.
-
 <project>
     <overview>
         Backup repository for Claude Code memory files, custom skills, and reusable prompts.
@@ -20,6 +18,7 @@ This file provides guidance to Claude Code when working in this repository.
         <cmd name="backup">cp ~/.claude/CLAUDE.md ~/ai-assistant-config/claude-code/CLAUDE.md</cmd>
         <cmd name="restore">cp ~/ai-assistant-config/claude-code/CLAUDE.md ~/.claude/CLAUDE.md</cmd>
         <cmd name="commit">git add -A &amp;&amp; git commit -m "Update memory" &amp;&amp; git push</cmd>
+        <cmd name="full_sync">backup + commit combined</cmd>
     </sync_commands>
 
     <memory_architecture>
@@ -33,25 +32,11 @@ This file provides guidance to Claude Code when working in this repository.
             Gitignored - private notes, session history
         </file>
     </memory_architecture>
+
+    <memory_tree>
+        <file path="~/.claude/CLAUDE.md" scope="Global" content="Persona, directives, workstation" />
+        <file path="homelab-ops/CLAUDE.md" scope="Project" content="Infrastructure, services, monitoring" />
+        <file path="my-portfolio/CLAUDE.md" scope="Project" content="Hugo structure, content tips" />
+        <file path="ai-assistant-config/CLAUDE.md" scope="Project" content="This file - sync instructions" />
+    </memory_tree>
 </project>
-
-## Sync Workflow
-
-```bash
-# After making changes to global memory
-cp ~/.claude/CLAUDE.md ~/ai-assistant-config/claude-code/CLAUDE.md
-cd ~/ai-assistant-config
-git add -A && git commit -m "Update memory" && git push
-
-# Restore from backup (new machine)
-cp ~/ai-assistant-config/claude-code/CLAUDE.md ~/.claude/CLAUDE.md
-```
-
-## Memory Tree
-
-| File | Scope | Content |
-|------|-------|---------|
-| `~/.claude/CLAUDE.md` | Global | Persona, directives, workstation |
-| `homelab-ops/CLAUDE.md` | Project | Infrastructure, services, monitoring |
-| `my-portfolio/CLAUDE.md` | Project | Hugo structure, content tips |
-| `ai-assistant-config/CLAUDE.md` | Project | This file - sync instructions |
