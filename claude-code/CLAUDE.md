@@ -108,6 +108,48 @@ Personal preferences and cross-project context for Claude Code.
                 <service name="Promtail" />
             </server>
         </services>
+        <workstation name="Laptop" os="Pop!_OS 24.04 LTS (COSMIC)">
+            <role>SysAdmin / Security / Dev</role>
+            <core_system>
+                <shell>Zsh with Powerlevel10k theme</shell>
+                <backups>Timeshift (RSYNC snapshots)</backups>
+                <firewall>UFW enabled</firewall>
+                <desktop>COSMIC (Rust-based)</desktop>
+            </core_system>
+            <network>
+                <tailscale>VPN mesh for remote Homelab access</tailscale>
+                <ssh_keys>Ed25519 key pair, ~/.ssh/config for passwordless Homelab entry</ssh_keys>
+                <browser>Firefox</browser>
+            </network>
+            <containers>
+                <docker>Installed (user permissions configured)</docker>
+                <portainer url="http://localhost:9000">Local test container management</portainer>
+            </containers>
+            <software>
+                <app name="Obsidian" category="Productivity">Knowledge Base (Flatpak)</app>
+                <app name="Wireshark" category="Security">Network Analysis</app>
+                <app name="Nmap" category="Security">Network Scanner</app>
+                <app name="Diodon" category="Tools">Clipboard Manager (autostart)</app>
+                <app name="Htop" category="Tools">Process Viewer</app>
+                <app name="Gammastep" category="Tools">Night Light (Wayland/COSMIC workaround)</app>
+            </software>
+            <workspaces>
+                <workspace num="1" name="Personal">Browser, Discord</workspace>
+                <workspace num="2" name="Work">Terminal, VS Code</workspace>
+                <workspace num="3" name="Gaming">Steam</workspace>
+            </workspaces>
+            <aliases file="~/.zshrc">
+                <alias name="update">sudo apt update &amp;&amp; sudo apt full-upgrade -y &amp;&amp; sudo apt autoremove -y</alias>
+                <alias name="install">sudo apt install</alias>
+                <alias name="myip">curl ifconfig.me</alias>
+                <alias name="ports">sudo lsof -i -P -n | grep LISTEN</alias>
+                <alias name="night">wlsunset -T 4000</alias>
+            </aliases>
+            <notes>
+                <note>COSMIC Night Light UI missing - use gammastep or monitor buttons (NVIDIA/Wayland)</note>
+                <note>COSMIC Terminal headerbar: ~/.config/cosmic/com.system76.CosmicTerm/v1/show_headerbar</note>
+            </notes>
+        </workstation>
     </infrastructure>
 
     <projects>
