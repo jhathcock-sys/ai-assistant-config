@@ -95,6 +95,9 @@ Personal preferences and cross-project context for Claude Code.
         <project name="my-portfolio" path="/home/cib/my-portfolio" repo="github.com:jhathcock-sys/me.git" live="https://jhathcock-sys.github.io/me/">
             Hugo portfolio site with PaperMod theme
         </project>
+        <project name="podcast-studio" path="/home/cib/podcast-studio" repo="github.com:jhathcock-sys/podcast-studio.git">
+            Self-hosted video podcast recording platform - LiveKit, React, MinIO, FFmpeg. Supports 4K multi-track recording for up to 6 participants, live streaming, and scene switching. Designed for D&D sessions.
+        </project>
     </projects>
 
     <documentation>
