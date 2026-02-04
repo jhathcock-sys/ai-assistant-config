@@ -38,6 +38,7 @@
             Podcast-Studio.md - Video recording platform
             Portfolio-Site.md - Hugo site documentation
             Claude-Memory-System.md - AI memory architecture
+            Homelab-Wiki.md - Public wiki mirror with Quartz (jhathcock-sys.github.io/homelab-wiki)
         </folder>
         <folder name="Reference">
             Personal-Context.md - Profile, goals, learning path
@@ -104,6 +105,7 @@
 
     <related_projects>
         <project>homelab-ops - Docker Compose stacks (GitOps repository)</project>
+        <project>homelab-wiki - Public sanitized mirror (Quartz v4, GitHub Pages)</project>
         <project>my-portfolio - Portfolio site documenting homelab projects</project>
         <project>ai-assistant-config - Backup of all CLAUDE.md files</project>
     </related_projects>

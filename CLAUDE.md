@@ -17,6 +17,9 @@
         <dir path="homelab-docs/">
             <file path="CLAUDE.md">Backup of homelab-docs project memory</file>
         </dir>
+        <dir path="homelab-wiki/">
+            <file path="CLAUDE.md">Backup of homelab-wiki project memory</file>
+        </dir>
         <dir path="podcast-studio/">
             <file path="CLAUDE.md">Backup of podcast-studio project memory</file>
         </dir>
@@ -49,6 +52,7 @@
         <file path="~/.claude/CLAUDE.md" scope="Global" content="Persona, directives, workstation, project pointers" />
         <file path="homelab-ops/CLAUDE.md" scope="Project" content="Infrastructure, Docker stacks, monitoring, security" />
         <file path="homelab-docs/CLAUDE.md" scope="Project" content="Obsidian vault structure, navigation, documentation" />
+        <file path="homelab-wiki/CLAUDE.md" scope="Project" content="Quartz v4 wiki, sanitization pipeline, GitHub Pages deployment" />
         <file path="podcast-studio/CLAUDE.md" scope="Project" content="LiveKit video recording, architecture, deployment" />
         <file path="my-portfolio/CLAUDE.md" scope="Project" content="Hugo site structure, content tips, commands" />
         <file path="ai-assistant-config/CLAUDE.md" scope="Project" content="This file - memory backup, sync instructions" />

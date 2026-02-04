@@ -88,6 +88,7 @@ Personal preferences and cross-project context for Claude Code.
     <projects>
         <project name="homelab-ops" path="/home/cib/homelab-ops" repo="github.com:jhathcock-sys/Dockers.git">Docker Compose infrastructure stacks</project>
         <project name="homelab-docs" path="/home/cib/Documents/HomeLab/HomeLab" repo="github.com:jhathcock-sys/homelab-docs.git">Obsidian documentation vault</project>
+        <project name="homelab-wiki" path="/home/cib/homelab-wiki" repo="github.com:jhathcock-sys/homelab-wiki.git" live="https://jhathcock-sys.github.io/homelab-wiki/">Public wiki mirror with sanitization</project>
         <project name="podcast-studio" path="/home/cib/podcast-studio" repo="github.com:jhathcock-sys/podcast-studio.git">Video podcast recording platform</project>
         <project name="my-portfolio" path="/home/cib/my-portfolio" repo="github.com:jhathcock-sys/me.git" live="https://jhathcock-sys.github.io/me/">Hugo portfolio site</project>
         <project name="ai-assistant-config" path="/home/cib/ai-assistant-config" repo="github.com:jhathcock-sys/ai-assistant-config.git">Claude Code memory backup</project>
@@ -95,6 +96,7 @@ Personal preferences and cross-project context for Claude Code.
 
     <documentation>
         <primary_source>homelab-docs project (_Index.md)</primary_source>
+        <public_wiki>homelab-wiki (sanitized mirror at jhathcock-sys.github.io/homelab-wiki)</public_wiki>
         <note>See homelab-docs/CLAUDE.md for full vault structure and navigation details</note>
     </documentation>
 </root>
