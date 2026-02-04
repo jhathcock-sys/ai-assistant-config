@@ -66,6 +66,25 @@ get_context_percent() {
     echo "$input" | jq -r '.context_window.used_percentage // 0'
 }
 
+# Get the session usage percentage (how much of the total session budget is used)
+# This tracks the cumulative context across all messages in the session
+get_session_percent() {
+    # Try to get pre-calculated session percentage
+    local session_pct=$(echo "$input" | jq -r '.session.used_percentage // empty')
+    if [ -n "$session_pct" ]; then
+        echo "$session_pct"
+    else
+        # Fallback: calculate from tokens if available
+        local tokens_used=$(echo "$input" | jq -r '.session.tokens_used // 0')
+        local tokens_limit=$(echo "$input" | jq -r '.session.tokens_limit // 0')
+        if [ "$tokens_limit" -gt 0 ]; then
+            echo "scale=2; ($tokens_used / $tokens_limit) * 100" | bc
+        else
+            echo "0"
+        fi
+    fi
+}
+
 # Get the total cost of the session in USD
 get_cost() {
     echo "$input" | jq -r '.cost.total_cost_usd // 0'
@@ -121,13 +140,15 @@ MODEL=$(get_model_name)
 DIR=$(get_current_dir)
 DIR_NAME="${DIR##*/}"           # Extract just the directory name (basename)
 CONTEXT=$(get_context_percent)
+SESSION=$(get_session_percent)
 COST=$(get_cost)
 GIT_BRANCH=$(get_git_branch)
 LINES_ADD=$(get_lines_added)
 LINES_DEL=$(get_lines_removed)
 
-# Format context percentage as integer (remove decimal places)
+# Format percentages as integers (remove decimal places)
 CONTEXT_INT=$(printf "%.0f" "$CONTEXT")
+SESSION_INT=$(printf "%.0f" "$SESSION")
 
 # Format cost to 4 decimal places for readability
 COST_FMT=$(printf "%.4f" "$COST")
@@ -150,10 +171,15 @@ if [ -n "$GIT_BRANCH" ]; then
     output+="${GREEN}🌿 ${GIT_BRANCH}${RESET}"
 fi
 
-# Context window usage in yellow
+# Context window usage in yellow (per-message context)
 # This helps you know when you're approaching the context limit
 output+="${DIM} | ${RESET}"
-output+="${YELLOW}📊 ${CONTEXT_INT}%${RESET}"
+output+="${YELLOW}📊 Ctx:${CONTEXT_INT}%${RESET}"
+
+# Session usage percentage in yellow (cumulative session budget)
+# This shows how much of your total session you've used
+output+="${DIM} | ${RESET}"
+output+="${YELLOW}📈 Sess:${SESSION_INT}%${RESET}"
 
 # Lines changed (only show if there are changes)
 if [ "$LINES_ADD" != "0" ] || [ "$LINES_DEL" != "0" ]; then
