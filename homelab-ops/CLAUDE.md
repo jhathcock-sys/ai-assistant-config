@@ -141,17 +141,18 @@
 
         <web_interface name="Dockhand" url="http://192.168.1.4:3000" />
         <web_interface name="Homepage" url="http://192.168.1.4:4000" />
-        <web_interface name="Grafana" url="http://192.168.1.4:3030" creds="admin / N0r@1251" />
+        <web_interface name="Grafana" url="http://192.168.1.4:3030" />
         <web_interface name="Prometheus" url="http://192.168.1.4:9090" />
         <web_interface name="Alertmanager" url="http://192.168.1.4:9093" note="Discord notifications" />
         <web_interface name="Loki" url="http://192.168.1.4:3101" note="Log aggregation" />
         <web_interface name="Uptime Kuma" url="http://192.168.1.4:3001" />
         <web_interface name="Homebox" url="http://192.168.1.4:3100" />
-        <web_interface name="Wazuh Dashboard" url="https://192.168.1.7" creds="admin / ddZtfWVFD+7IV64.6DJzKRBPa6wYvSbA" />
+        <web_interface name="Wazuh Dashboard" url="https://192.168.1.7" />
         <web_interface name="Wazuh API" url="http://192.168.1.7:55000" />
         <web_interface name="Pi-hole Primary" url="http://192.168.1.3/admin" />
         <web_interface name="Pi-hole Secondary" url="http://192.168.1.234:8080/admin" />
         <web_interface name="NPM Admin" url="http://192.168.1.6:81" />
+        <note>Credentials stored in CLAUDE.local.md (gitignored)</note>
     </access_points>
 
     <services>

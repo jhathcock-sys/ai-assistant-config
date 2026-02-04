@@ -11,6 +11,18 @@
             <file path="CLAUDE.md">Backup of ~/.claude/CLAUDE.md (global memory)</file>
             <dir path="skills/">Custom Claude Code skills (future)</dir>
         </dir>
+        <dir path="homelab-ops/">
+            <file path="CLAUDE.md">Backup of homelab-ops project memory</file>
+        </dir>
+        <dir path="homelab-docs/">
+            <file path="CLAUDE.md">Backup of homelab-docs project memory</file>
+        </dir>
+        <dir path="podcast-studio/">
+            <file path="CLAUDE.md">Backup of podcast-studio project memory</file>
+        </dir>
+        <dir path="my-portfolio/">
+            <file path="CLAUDE.md">Backup of my-portfolio project memory</file>
+        </dir>
         <dir path="prompts/">Reusable prompt templates (future)</dir>
     </structure>
 
@@ -34,9 +46,11 @@
     </memory_architecture>
 
     <memory_tree>
-        <file path="~/.claude/CLAUDE.md" scope="Global" content="Persona, directives, workstation" />
-        <file path="homelab-ops/CLAUDE.md" scope="Project" content="Infrastructure, services, monitoring" />
-        <file path="my-portfolio/CLAUDE.md" scope="Project" content="Hugo structure, content tips" />
-        <file path="ai-assistant-config/CLAUDE.md" scope="Project" content="This file - sync instructions" />
+        <file path="~/.claude/CLAUDE.md" scope="Global" content="Persona, directives, workstation, project pointers" />
+        <file path="homelab-ops/CLAUDE.md" scope="Project" content="Infrastructure, Docker stacks, monitoring, security" />
+        <file path="homelab-docs/CLAUDE.md" scope="Project" content="Obsidian vault structure, navigation, documentation" />
+        <file path="podcast-studio/CLAUDE.md" scope="Project" content="LiveKit video recording, architecture, deployment" />
+        <file path="my-portfolio/CLAUDE.md" scope="Project" content="Hugo site structure, content tips, commands" />
+        <file path="ai-assistant-config/CLAUDE.md" scope="Project" content="This file - memory backup, sync instructions" />
     </memory_tree>
 </project>

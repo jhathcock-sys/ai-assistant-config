@@ -86,37 +86,15 @@ Personal preferences and cross-project context for Claude Code.
     </workstation>
 
     <projects>
-        <project name="homelab-ops" path="/home/cib/homelab-ops" repo="github.com:jhathcock-sys/Dockers.git">
-            Infrastructure as Code - Docker Compose stacks for homelab
-        </project>
-        <project name="ai-assistant-config" path="/home/cib/ai-assistant-config" repo="github.com:jhathcock-sys/ai-assistant-config.git">
-            Claude Code memory backup, custom skills, prompts
-        </project>
-        <project name="my-portfolio" path="/home/cib/my-portfolio" repo="github.com:jhathcock-sys/me.git" live="https://jhathcock-sys.github.io/me/">
-            Hugo portfolio site with PaperMod theme
-        </project>
-        <project name="podcast-studio" path="/home/cib/podcast-studio" repo="github.com:jhathcock-sys/podcast-studio.git">
-            Self-hosted video podcast recording platform - LiveKit, React, MinIO, FFmpeg. Supports 4K multi-track recording for up to 6 participants, live streaming, and scene switching. Designed for D&D sessions.
-        </project>
-        <project name="homelab-docs" path="/home/cib/Documents/HomeLab/HomeLab" repo="github.com:jhathcock-sys/homelab-docs.git">
-            Obsidian vault - Structured homelab documentation. 31 wiki-linked markdown files across 8 folders. Git-versioned for history and backup.
-        </project>
+        <project name="homelab-ops" path="/home/cib/homelab-ops" repo="github.com:jhathcock-sys/Dockers.git">Docker Compose infrastructure stacks</project>
+        <project name="homelab-docs" path="/home/cib/Documents/HomeLab/HomeLab" repo="github.com:jhathcock-sys/homelab-docs.git">Obsidian documentation vault</project>
+        <project name="podcast-studio" path="/home/cib/podcast-studio" repo="github.com:jhathcock-sys/podcast-studio.git">Video podcast recording platform</project>
+        <project name="my-portfolio" path="/home/cib/my-portfolio" repo="github.com:jhathcock-sys/me.git" live="https://jhathcock-sys.github.io/me/">Hugo portfolio site</project>
+        <project name="ai-assistant-config" path="/home/cib/ai-assistant-config" repo="github.com:jhathcock-sys/ai-assistant-config.git">Claude Code memory backup</project>
     </projects>
 
     <documentation>
-        <doc path="/home/cib/Documents/HomeLab/HomeLab/_Index.md" type="obsidian_vault">
-            Obsidian Vault - Structured homelab documentation with wiki-style linking.
-            31 files across 8 folders: Infrastructure, Services, Security, Projects, Reference, Roadmap, Changelog.
-            Start at _Index.md for navigation. All pages cross-linked with [[Page-Name]] syntax.
-        </doc>
-        <vault_structure>
-            Infrastructure/ - Network topology, GitOps workflow, workstation setup
-            Services/ - Homepage, Dockhand, Pi-hole, Minecraft, NAS, Homebox, Monitoring/
-            Security/ - Wazuh SIEM, security hardening, best practices
-            Projects/ - Podcast Studio, Portfolio Site, Claude Memory System
-            Reference/ - Docker commands, troubleshooting, environment files, personal context
-            Roadmap/ - Future plans, current TODO
-            Changelog/ - Session notes organized by date
-        </vault_structure>
+        <primary_source>homelab-docs project (_Index.md)</primary_source>
+        <note>See homelab-docs/CLAUDE.md for full vault structure and navigation details</note>
     </documentation>
 </root>
