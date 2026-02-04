@@ -101,6 +101,19 @@ Personal preferences and cross-project context for Claude Code.
     </projects>
 
     <documentation>
-        <doc path="/home/cib/Documents/HomeLab/HomeLab/Homelab and Portfolio Log.md">Obsidian Main Log</doc>
+        <doc path="/home/cib/Documents/HomeLab/HomeLab/_Index.md" type="obsidian_vault">
+            Obsidian Vault - Structured homelab documentation with wiki-style linking.
+            31 files across 8 folders: Infrastructure, Services, Security, Projects, Reference, Roadmap, Changelog.
+            Start at _Index.md for navigation. All pages cross-linked with [[Page-Name]] syntax.
+        </doc>
+        <vault_structure>
+            Infrastructure/ - Network topology, GitOps workflow, workstation setup
+            Services/ - Homepage, Dockhand, Pi-hole, Minecraft, NAS, Homebox, Monitoring/
+            Security/ - Wazuh SIEM, security hardening, best practices
+            Projects/ - Podcast Studio, Portfolio Site, Claude Memory System
+            Reference/ - Docker commands, troubleshooting, environment files, personal context
+            Roadmap/ - Future plans, current TODO
+            Changelog/ - Session notes organized by date
+        </vault_structure>
     </documentation>
 </root>
