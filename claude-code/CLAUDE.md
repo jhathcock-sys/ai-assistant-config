@@ -98,6 +98,9 @@ Personal preferences and cross-project context for Claude Code.
         <project name="podcast-studio" path="/home/cib/podcast-studio" repo="github.com:jhathcock-sys/podcast-studio.git">
             Self-hosted video podcast recording platform - LiveKit, React, MinIO, FFmpeg. Supports 4K multi-track recording for up to 6 participants, live streaming, and scene switching. Designed for D&D sessions.
         </project>
+        <project name="homelab-docs" path="/home/cib/Documents/HomeLab/HomeLab" repo="github.com:jhathcock-sys/homelab-docs.git">
+            Obsidian vault - Structured homelab documentation. 31 wiki-linked markdown files across 8 folders. Git-versioned for history and backup.
+        </project>
     </projects>
 
     <documentation>
