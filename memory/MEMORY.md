@@ -23,12 +23,26 @@ This syncs content from the private Obsidian vault to the public wiki at https:/
 ### GitOps Workflow
 - Repository: `homelab-ops` at `/home/cib/homelab-ops`
 - When deploying new services, add compose files to repo for drift prevention
-- Run periodic audits to catch configuration drift between deployed vs repository
+- **Drift Detection:** Run `cd ~/homelab-ops && ./scripts/drift-detection.sh` to validate infrastructure
+- Pi5 stacks must be in TWO locations:
+  - `pi5/` directory (actual deployment location)
+  - `proxmox/pi5-stacks/` directory (for Dockhand/Hawser remote management)
+  - Both in Git AND deployed to `/opt/pi5-stacks/` on ProxMoxBox
 
 ### Prometheus Configuration
 - Never configured standalone containers as scrape targets (unless they expose metrics)
 - Container metrics covered by cAdvisor at 192.168.1.4:8081
 - Current targets: prometheus, proxmoxbox, pi5, cadvisor, pihole, npm, wazuh, synology-snmp
+
+## Automation & Tools
+
+### GitOps Drift Detection
+- **Script:** `~/homelab-ops/scripts/drift-detection.sh`
+- **Purpose:** Validates running containers match repository
+- **Checks:** 21 containers across ProxMoxBox (14) and Pi5 (7)
+- **Usage:** `cd ~/homelab-ops && ./scripts/drift-detection.sh`
+- **Exit code:** Number of issues found (0 = clean)
+- **Important:** Excludes `proxmox/pi5-stacks/` when checking ProxMoxBox (Hawser remote management)
 
 ## Common Mistakes Avoided
 
