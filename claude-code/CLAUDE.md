@@ -97,6 +97,8 @@ Personal preferences and cross-project context for Claude Code.
     <documentation>
         <primary_source>homelab-docs project (_Index.md)</primary_source>
         <public_wiki>homelab-wiki (sanitized mirror at jhathcock-sys.github.io/homelab-wiki)</public_wiki>
+        <vault_sync>Obsidian LiveSync - CouchDB on Pi5 (192.168.1.234:5984)</vault_sync>
         <note>See homelab-docs/CLAUDE.md for full vault structure and navigation details</note>
+        <note>Real-time vault sync via Self-hosted LiveSync plugin + CouchDB</note>
     </documentation>
 </root>
