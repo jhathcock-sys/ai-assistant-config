@@ -128,3 +128,13 @@ This syncs content from the private Obsidian vault to the public wiki at https:/
 - Dockhand: 192.168.1.4:3000 (Docker management)
 - Homepage: 192.168.1.4:4000 (Dashboard)
 - Uptime Kuma: 192.168.1.4:3001 (Health checks)
+
+
+## Recent Changes
+
+### 2026-02-05: Memory System Refactoring
+- Restructured directory layout (global/, session/, projects/)
+- Implemented symlink-based workflow
+- Added helper scripts (install-symlinks.sh, sync.sh)
+- Consolidated duplicate project directories
+- Added .gitignore for credential files
