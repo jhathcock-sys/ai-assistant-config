@@ -1,0 +1,16 @@
+# Sensitive files - credentials and tokens
+*.local.md
+**/CLAUDE.local.md
+secrets/
+credentials/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

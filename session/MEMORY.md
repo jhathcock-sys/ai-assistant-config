@@ -1,5 +1,37 @@
 # Claude Code Memory
 
+## Project Quick Reference
+
+| Project | Path | Repository | Live URL |
+|---------|------|------------|----------|
+| homelab-ops | /home/cib/homelab-ops | github.com:jhathcock-sys/Dockers.git | - |
+| homelab-docs | /home/cib/Documents/HomeLab/HomeLab | github.com:jhathcock-sys/homelab-docs.git | - |
+| homelab-wiki | /home/cib/homelab-wiki | github.com:jhathcock-sys/homelab-wiki.git | https://jhathcock-sys.github.io/homelab-wiki/ |
+| podcast-studio | /home/cib/podcast-studio | github.com:jhathcock-sys/podcast-studio.git | - |
+| my-portfolio | /home/cib/my-portfolio | github.com:jhathcock-sys/me.git | https://jhathcock-sys.github.io/me/ |
+| ai-assistant-config | /home/cib/ai-assistant-config | github.com:jhathcock-sys/ai-assistant-config.git | - |
+
+## Workstation Configuration
+
+**Platform:** Pop!_OS 24.04 LTS (COSMIC Desktop)
+
+### System Tools
+- **Shell:** Zsh with Powerlevel10k theme
+- **Backups:** Timeshift (RSYNC snapshots)
+- **Firewall:** UFW enabled
+- **Network:** Tailscale VPN mesh, Ed25519 SSH keys
+- **Containers:** Docker + Portainer (localhost:9000)
+
+### Zsh Aliases
+- `update` → sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+- `install` → sudo apt install
+- `myip` → curl ifconfig.me
+- `ports` → sudo lsof -i -P -n | grep LISTEN
+
+### Notes
+- COSMIC Terminal headerbar: ~/.config/cosmic/com.system76.CosmicTerm/v1/show_headerbar
+- Night Light: use gammastep (NVIDIA/Wayland limitation)
+
 ## Workflow Reminders
 
 ### Homelab Documentation Sync
