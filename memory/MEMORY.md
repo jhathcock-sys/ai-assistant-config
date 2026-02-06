@@ -13,6 +13,13 @@ cd ~/homelab-wiki && ./sync-sanitize.sh
 
 This syncs content from the private Obsidian vault to the public wiki at https://jhathcock-sys.github.io/homelab-wiki/ with sanitization (removes IPs, credentials, personal info).
 
+### Quartz Wiki Requirements
+**CRITICAL:** The homelab wiki uses Quartz v4, which has specific file naming requirements:
+- **Homepage MUST be named `index.md`** (lowercase, no underscore) in `content/` directory
+- Using `_Index.md` or `Index.md` will cause build warnings and homepage won't display
+- Both `homelab-docs` and `homelab-wiki` must use `index.md` to stay in sync
+- Quartz will generate `index.html` from `index.md` for GitHub Pages
+
 ## Infrastructure Notes
 
 ### Server Resource Usage
@@ -58,6 +65,13 @@ This syncs content from the private Obsidian vault to the public wiki at https:/
 ### Memory Limits
 - Pi5 kernel doesn't support memory cgroup limits (warnings are informational only)
 - Still include limits in compose files for documentation and ProxMoxBox deployment
+
+### Static IP Configuration Issues (VMs)
+- **Wazuh VM (Fixed 2026-02-05):** Rogue `dhclient` process can override static IP configs
+- **Solution:** Kill dhclient + disable cloud-init + create systemd service to prevent recurrence
+- **Prevention:** Always add DHCP reservations on router as backup (MAC → IP mapping)
+- **Check for dhclient:** `ps aux | grep dhclient | grep -v grep`
+- **Service created:** `/etc/systemd/system/ensure-static-ip.service` on Wazuh VM
 
 ## Infrastructure Cleanup Completed (2026-02-04)
 - Removed Syncthing (replaced by Obsidian LiveSync/CouchDB)
