@@ -2,7 +2,7 @@
 
 <project>
     <overview>
-        Self-hosted video podcast recording platform designed for D&D sessions and podcasts.
+        Self-hosted video podcast recording platform designed for D&amp;D sessions and podcasts.
         Supports 4K multi-track recording, remote guests, and live streaming.
         Hybrid architecture: LiveKit for real-time communication + local browser recording for quality.
     </overview>

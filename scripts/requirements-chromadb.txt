@@ -1,0 +1,14 @@
+# ChromaDB Ingestion Pipeline Dependencies
+# Install with: pip install -r requirements-chromadb.txt
+
+# ChromaDB Python client for HTTP connections
+chromadb-client>=0.4.0
+
+# Parse markdown frontmatter in documentation files
+python-frontmatter>=1.0.0
+
+# Parse and process markdown files
+markdown>=3.4.0
+
+# Environment variable management
+python-dotenv>=1.0.0

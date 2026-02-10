@@ -4,6 +4,12 @@
 secrets/
 credentials/
 
+# ChromaDB ingestion pipeline
+scripts/.env
+scripts/.ingest-state.json
+scripts/venv/
+scripts/__pycache__/
+
 # OS files
 .DS_Store
 Thumbs.db
